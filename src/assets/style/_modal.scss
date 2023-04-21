@@ -1,0 +1,76 @@
+.modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 100;
+    &-enter-active, &-leave-active{
+        transition: 0.5s linear;
+    }
+    &-enter-from, &-leave-to{
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    &__content{
+        padding: 24px;
+        background: linear-gradient(0deg, rgba(103, 80, 164, 0.11), rgba(103, 80, 164, 0.11)), #FFFBFE;
+        border-radius: 28px;
+        max-width: 312px;
+        width: 100%;
+        h3{
+            margin-bottom: 16px;
+            font-size: 24px;
+            color: #1C1B1F;
+        }
+        form{
+            input, textarea{
+                display: block;
+                width: 100%;
+                margin-bottom: 16px;
+                padding: 8px 16px;
+                font-size: 16px;
+                line-height: 24px;
+                background: #E7E0EC;
+                border-radius: 4px 4px 0px 0px;
+                border-bottom: 1px solid #1C1B1F;
+                resize: none;
+                &::placeholder{
+                    color: #6750A4;
+                }
+
+            }
+        }
+    }
+    &__btns{
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-top: 24px;
+        button{
+            font-size: 14px;
+            color: #CF1B1B;
+            letter-spacing: 0.1px;
+            padding: 10px 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: 500ms;
+            &:hover{
+                background: #FFE1E1;
+                border-radius: 5px;
+            }
+            &:last-child{
+                color: #6750A4;
+                &:hover{
+                    background: #E6DDFF;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

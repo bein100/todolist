@@ -1,0 +1,100 @@
+.notes {
+    margin-top: 30px;
+    position: relative;
+    &-enter-active, &-leave-active{
+        transition: 0.3s linear;
+    }
+    &-enter-from, &-leave-to{
+        opacity: 0;
+        transform: translateY(30%);
+    }
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        h2 {
+            font-size: 22px;
+            color: #323232;
+        }
+        button {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            background: linear-gradient(0deg, rgba(103, 80, 164, 0.11), rgba(103, 80, 164, 0.11)), #FFFBFE;
+            box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            height: 56px;
+            padding: 18px 20px;
+            width: 121px;
+            span{
+                font-weight: 500;
+                color: #6750A4;
+            }
+        }
+    }
+    &__item {
+        background: linear-gradient(0deg, rgba(103, 80, 164, 0.05), rgba(103, 80, 164, 0.05)), #FFFBFE;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        border-radius: 16px;
+        padding: 16px 16px 10px;
+        word-break: break-all;
+        h3 {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.1px;
+            color: #1C1B1F;
+        }
+        span, p{
+            font-size: 14px;
+            letter-spacing: 0.25px;
+            color: #CAC4D0;
+
+        }
+        p{
+            line-height: 20px;
+            color: #49454F;
+            margin: 16px 0 30px;
+        }
+    }
+    &__control{
+        text-transform: uppercase;
+        display: flex;
+        justify-content: flex-end;
+        a{
+            color: #6750A4;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 00.1px;
+            display: flex;
+            gap: 12px;
+            border-radius: 5px;
+            padding: 13px;
+            transition: 0.5s linear;
+            &:hover{
+                background: #E6DDFF;
+            }
+            &:last-child{
+                color: #CF1B1B;
+                &:hover{
+                    background: #FFE1E1;
+                }
+            }
+        }
+    }
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        &.list{
+         grid-template-columns: initial;
+         span{
+            display: block;
+            text-align: right;
+            margin-top: -22px;
+         }   
+        }
+    }
+}
